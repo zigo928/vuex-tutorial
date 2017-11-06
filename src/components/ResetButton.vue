@@ -1,15 +1,13 @@
 <template>
-  <div>
-    Count is {{ sharedState.counter }}
-  </div>
+  <button @click.prevent="reset">reset</button>
 </template>
 
 <script>
 import store from '../store'
 export default {
-  data () {
-    return {
-      sharedState: store.state
+  methods: {
+    reset () {
+      store.reset()
     }
   }
 }
