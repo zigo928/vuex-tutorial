@@ -52,11 +52,13 @@ export default {
   },
   methods: {
     paginateRows (data, pageNum) {
+      console.log('page num is ' + pageNum)
       let start = 5 * pageNum
       let end = 5 * (pageNum + 1)
       return _.slice(data, start, end)
     },
     sortedRows (data, sortColumn) {
+      console.log('sort column is ' + sortColumn)
       return _.sortBy(data, sortColumn)
     },
     filteredRows (data, searchText) {
